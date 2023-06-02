@@ -2,7 +2,7 @@
 Want to build LLM Apps...but without OpenAI dependencies? Well have I got the code for you my friend. In this project I walk through how to build a langchain x streamlit app using GPT4All. We start off with a simple app and then build up to a langchain PythonREPL agent. 
 
 ## See it live and in action 📺
-[![Tutorial](https://i.imgur.com/qBoUX8m.jpg)](https://youtu.be/u8vQyTzNGVY 'Tutorial')
+[![Tutorial](https://i.imgur.com/qBoUX8m.jpg)](https://youtu.be/5JpPo-NOq9s 'Tutorial')
 
 # Startup 🚀
 1. Create a virtual environment `python -m venv nonopenai`
