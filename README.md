@@ -17,9 +17,11 @@ Want to build LLM Apps...but without OpenAI dependencies? Well have I got the co
 5. Clone this repo `git clone https://github.com/nicknochnack/NonOpenAI`
 6. Go into the directory `cd NonOpenAI`
 7. Install the required dependencies `pip install -r requirements.txt`
-8. Update the path of the models in line 6 of `app.py`
-9.  Start the app `streamlit run app.py`  
+8. Update the path of the models in line 9 of `app.py` and line 5 of `app-chain.py`
+9.  Start the python agent app by running `streamlit run app.py` or the chain app by running `streamlit run app-chain.py`  
 10. Go back to my YouTube channel and like and subscribe 😉...no seriously...please! lol 
+11. The comparison app can be started by running `streamlit run app-comparison.py` before you do that though, update the base ggml download path in line 16, e.g. `BASE_PATH = 'C:/Users/User/AppData/Local/nomic.ai/GPT4All/'` and openAI api key on line 18
+
 
 # Other References 🔗
 <p>-<a href="https://github.com/nomic-ai/gpt4all/tree/main">GPT4AllReference
