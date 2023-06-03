@@ -5,7 +5,6 @@ import os
 # Import depdencies 
 from langchain.llms import GPT4All, OpenAI
 from langchain import PromptTemplate, LLMChain
-from ctransformers.langchain import CTransformers
 
 # Python toolchain imports 
 from langchain.agents.agent_toolkits import create_python_agent
