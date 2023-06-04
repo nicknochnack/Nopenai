@@ -6,7 +6,7 @@ from langchain.llms import GPT4All
 from langchain.agents.agent_toolkits import create_python_agent
 from langchain.tools.python.tool import PythonREPLTool
 
-PATH = 'C:/Users/User/AppData/Local/nomic.ai/GPT4All/ggml-gpt4all-l13b-snoozy.bin'
+PATH = 'C:/Users/shake/Documents/llms/ggml-wizard-13b-uncensored.bin'
 llm = GPT4All(model=PATH, verbose=True)
 
 agent_executor = create_python_agent(

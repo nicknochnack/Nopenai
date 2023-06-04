@@ -13,7 +13,7 @@ from langchain.tools.python.tool import PythonREPLTool
 
 
 # Path to weights 
-BASE_PATH = 'C:/Users/User/AppData/Local/nomic.ai/GPT4All/'
+BASE_PATH = 'C:/Users/shake/Documents/llms/'
 
 os.environ['OPENAI_API_KEY'] = 'YOUR OPENAI API KEY HERE'
 
@@ -25,12 +25,12 @@ with st.sidebar:
     option = st.radio('Choose your task', ['Base Gen', 'Creative', 'Summarization', 'Few Shot', 'Python'])
     models =  [*list(os.listdir(BASE_PATH)), 'OpenAI']
     model = st.radio('Choose your model', models)
-    st.write(model)
+    #st.write(model)
 
     if model != 'OpenAI': 
         PATH = f'{BASE_PATH}{model}'
         # Instance of llm
-        llm = GPT4All(model=PATH, verbose=True, temp=0.1, n_predict=4096, top_p=.95, top_k=40, n_batch=9, repeat_penalty=1.1, repeat_last_n=1.1) 
+        llm = GPT4All(model=PATH, verbose=True, temp=0.1, n_predict=None, top_p=.95, top_k=40, n_batch=9, repeat_penalty=1.1, repeat_last_n=1.1) 
         
     else: 
         llm = OpenAI(temperature=0.5)

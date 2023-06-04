@@ -2,7 +2,7 @@ import streamlit as st
 from langchain import PromptTemplate, LLMChain
 from langchain.llms import GPT4All
 
-PATH = 'C:/Users/User/AppData/Local/nomic.ai/GPT4All/ggml-mpt-7b-instruct.bin'
+PATH = 'C:/Users/shake/Documents/llms/ggml-wizard-13b-uncensored.bin'
 
 llm = GPT4All(model=PATH, verbose=True)
 
