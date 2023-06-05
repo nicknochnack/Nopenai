@@ -18,11 +18,12 @@ BASE_PATH = 'C:/Users/shake/Documents/llms/'
 os.environ['OPENAI_API_KEY'] = 'YOUR OPENAI API KEY HERE'
 
 # Title 
-st.title('🦜🔗 GPT For Y\'all')
+st.title('🦜🔗 Oracle Generation Tool with LLM')
 
 with st.sidebar:
     st.info('This application allows you to use LLMs for a range of tasks. The selections displayed below leverage prompt formatting to streamline your ability to do stuff!')
-    option = st.radio('Choose your task', ['Base Gen', 'Creative', 'Summarization', 'Few Shot', 'Python'])
+    #option = st.radio('Choose your task', ['Base Gen', 'Creative', 'Summarization', 'Few Shot', 'Python'])
+    option = st.radio('Choose your task', ['JUnit Test Gen', 'Assertion', 'Few Shot', 'Python'])
     models =  [*list(os.listdir(BASE_PATH)), 'OpenAI']
     model = st.radio('Choose your model', models)
     #st.write(model)
@@ -34,6 +35,53 @@ with st.sidebar:
         
     else: 
         llm = OpenAI(temperature=0.5)
+
+if option=='JUnit Test Gen': 
+    st.info('Use this application to generate JUnit Tests.')
+    
+    # Prompt box 
+    prompt = st.text_input('Plug in your prompt here!')
+    template = PromptTemplate(input_variables=['action'], template="""
+            As a creative agent, {action}
+    """)
+    template = PromptTemplate(input_variables=['action'], template="""
+            ### Instruction: 
+            The prompt below is a question to answer, a task to complete, or a conversation to respond to; decide which and write an appropriate response.
+            ### Prompt: 
+            {action}
+            ### Response:""")
+    chain = LLMChain(llm=llm, prompt=template, verbose=True) 
+    
+    # if we hit enter  
+    if prompt:
+        # Pass the prompt to the LLM Chain
+        response = chain.run(prompt) 
+        # do this
+        st.write(response)    
+
+if option=='Assertion': 
+    st.info('Use this application to generate Assertion for a test.')
+    
+    # Prompt box 
+    prompt = st.text_input('Plug in your prompt here!')
+    template = PromptTemplate(input_variables=['action'], template="""
+            As a creative agent, {action}
+    """)
+    template = PromptTemplate(input_variables=['action'], template="""
+            ### Instruction: 
+            The prompt below is a question to answer, a task to complete, or a conversation to respond to; decide which and write an appropriate response.
+            ### Prompt: 
+            {action}
+            ### Response:""")
+    chain = LLMChain(llm=llm, prompt=template, verbose=True) 
+    
+    # if we hit enter  
+    if prompt:
+        # Pass the prompt to the LLM Chain
+        response = chain.run(prompt) 
+        # do this
+        st.write(response)    
+
 
 if option=='Base Gen': 
     st.info('Use this application to perform standard chat generation tasks.')
