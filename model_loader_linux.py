@@ -12,6 +12,13 @@ model_id = "codeparrot/codeparrot-small-multi"
 model_id = 'chainyo/alpaca-lora-7b'
 model_id = 'mosaicml/mpt-7b-instruct'
 
+model_id = 'microsoft/CodeGPT-small-java-adaptedGPT2'
+model_id = 'microsoft/CodeGPT-small-java'
+model_id = 'codeparrot/codeparrot-small'
+model_id = 'mosaicml/mpt-7b-instruct'
+model_id = "codeparrot/codeparrot-small-multi"
+model_id = 'tiiuae/falcon-40b-instruct'
+
 tokenizer = AutoTokenizer.from_pretrained(model_id, trust_remote_code=True)
 model = AutoModelForCausalLM.from_pretrained(model_id, trust_remote_code=True)
 

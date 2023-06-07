@@ -1,0 +1,22 @@
+﻿public class CalculatorTest {
+    @Test public void testAdd() {
+        Calculator calculator = new Calculator();
+        int result1 = calculator.add(2, 3);
+        generate assertion
+    }
+    @Test public void testSubtract() {
+        Calculator calculator = new Calculator();
+        int result2 = calculator.subtract(3, 2);
+        generate assertion
+    }
+    @Test public void testMultiply() {
+        Calculator calculator = new Calculator();
+        int result3 = calculator.multiply(4, 5);
+        generate assertion
+    }
+    @Test public void testDivide() {
+        Calculator calculator = new Calculator();
+        double result4 = calculator.divide(6, 4);
+        generate assertion
+    }
+}
