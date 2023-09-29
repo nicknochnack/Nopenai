@@ -15,7 +15,7 @@ Want to build LLM Apps...but without OpenAI dependencies? Well have I got the co
    - Ubuntu: https://gpt4all.io/installers/gpt4all-installer-linux.run
 4. Download the required LLM models and take note of the PATH they're installed to
 5. Clone this repo `git clone https://github.com/nicknochnack/Nopenai`
-6. Go into the directory `cd NonOpenAI`
+6. Go into the directory `cd Nopenai`
 7. Install the required dependencies `pip install -r requirements.txt`
 8. Update the path of the models in line 9 of `app.py` and line 5 of `app-chain.py`
 9.  Start the python agent app by running `streamlit run app.py` or the chain app by running `streamlit run app-chain.py`  
